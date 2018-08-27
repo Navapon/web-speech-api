@@ -1,10 +1,9 @@
 try {
-  var SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
+  var SpeechRecognition = SpeechRecognition || webkitSpeechRecognition || null;
   var recognition = new SpeechRecognition();
 }
 catch(e) {
   console.error(e);
-  alert('Your browser not support')
   $('.no-browser-support').show();
   $('.app').hide();
 }
